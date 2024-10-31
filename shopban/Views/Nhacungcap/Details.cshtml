@@ -1,0 +1,41 @@
+﻿@model shopban.Models.NHACUNGCAP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div>
+    <h4>THÔNG TIN NHÀ CUNG CẤP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên nhà cung cấp:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNCC)
+        </dd>
+
+        <dt>
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diachi)
+        </dd>
+
+        <dt>
+            Điện thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienThoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "SuaNhacc", null, new { style = "min-width: 62px; border: 1px solid blue; display: inline-block; padding: 5px 10px; margin-bottom: 5px; text-decoration: none; color: blue;border-radius: 3px;" }) |
+    @Html.ActionLink("Quay lại danh sách", "Index", null, new { style = "color: #007bff; text-decoration: none; padding: 5px 10px; background-color: #f0f0f0; border: 1px solid #007bff; border-radius: 3px;" })
+</p>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<shopban.Models.NHACUNGCAP>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="margin-bottom:30px; ">QUẢN LÝ NHÀ CUNG CẤP</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới nhà cung cấp", "Themmoinhacungcap", null, new { style = "color: #007bff; text-decoration: none; padding: 5px 10px; background-color: #f0f0f0; border: 1px solid #007bff; border-radius: 3px;" })
+</p>
+<table class="table" style="margin-top:30px;">
+    <tr>
+        <th>
+            Tên nhà cung cấp:
+        </th>
+        <th>
+            Địa chỉ:
+        </th>
+        <th>
+            Điện thoại:
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DienThoai)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "SuaNhacc", new { id = item.MaNCC }, new { style = "min-width: 62px; border: 1px solid blue; display: inline-block; padding: 5px 10px; margin-bottom: 5px; text-decoration: none; color: blue;" }) <br />
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MaNCC }, new { style = "min-width: 62px; border: 1px solid green; display: inline-block; padding: 5px 10px; margin-bottom: 5px; text-decoration: none; color: green;" }) <br />
+                @Html.ActionLink("Xóa", "XoaNcc", new { id = item.MaNCC }, new { style = "min-width: 62px; border: 1px solid red; display: inline-block; padding: 5px 10px; margin-bottom: 5px; text-decoration: none; color: red;" }) <br />
+
+                
+            </td>
+        </tr>
+    }
+
+</table>

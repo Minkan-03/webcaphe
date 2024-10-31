@@ -1,0 +1,40 @@
+.Danhsach_menu {
+    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_Menu {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.Ten_menu {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+}
+
+.Danhsach_menu a:hover .Ten_menu {
+   border-bottom: 3px solid blue;
+   animation: all 0.2s ease;
+    
+}
+
+.edit-link {
+    color: blue;
+    /*Thêm ki?u dáng khác n?u c?n*/
+}
+
+.details-link {
+    color: green;
+    /*Thêm ki?u dáng khác n?u c?n*/
+}
+
+.delete-link {
+    color: red;
+    /*Thêm ki?u dáng khác n?u c?n*/
+}
